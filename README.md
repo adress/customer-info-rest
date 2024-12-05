@@ -1,6 +1,6 @@
 # Customer Info REST
 
-Customer Info REST es un servicio RESTful desarrollado en **Spring Boot** que permite consultar información básica de clientes. Este proyecto implementa una arquitectura **hexagonal basada en dominio**, lo que garantiza una separación clara de responsabilidades y facilita el mantenimiento y escalabilidad del sistema.
+Customer Info REST es un servicio desarrollado en **Spring Boot** que permite consultar información básica de clientes. Este proyecto implementa una arquitectura **hexagonal basada en dominio**, lo que garantiza una separación clara de responsabilidades y facilita el mantenimiento y escalabilidad del sistema.
 
 ---
 
