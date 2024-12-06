@@ -10,20 +10,20 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(Exception.class)
-    public ResponseEntity<ApiResponse<?>> handleGeneralException(Exception ex) {
+    public ResponseEntity<CustomApiResponse<?>> handleGeneralException(Exception ex) {
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                .body(ApiResponse.error("An unexpected error occurred: " + ex.getMessage(), null, null));
+                .body(CustomApiResponse.error("An unexpected error occurred: " + ex.getMessage(), null, null));
     }
 
     @ExceptionHandler(IllegalArgumentException.class)
-    public ResponseEntity<ApiResponse<?>> handleIllegalArgumentException(IllegalArgumentException ex) {
+    public ResponseEntity<CustomApiResponse<?>> handleIllegalArgumentException(IllegalArgumentException ex) {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST)
-                .body(ApiResponse.error(ex.getMessage(), null, null));
+                .body(CustomApiResponse.error(ex.getMessage(), null, null));
     }
 
     @ExceptionHandler(CustomerNotFoundException.class)
-    public ResponseEntity<ApiResponse<?>> handleCustomerNotFoundException(CustomerNotFoundException ex) {
+    public ResponseEntity<CustomApiResponse<?>> handleCustomerNotFoundException(CustomerNotFoundException ex) {
         return ResponseEntity.status(HttpStatus.NOT_FOUND)
-                .body(ApiResponse.error(ex.errorMessage(), ex.errorCode(), null));
+                .body(CustomApiResponse.error(ex.errorMessage(), ex.errorCode(), null));
     }
 }

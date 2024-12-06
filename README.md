@@ -20,6 +20,7 @@ Customer Info REST es un servicio desarrollado en **Spring Boot** que permite co
 - **Mockito** para pruebas unitarias.
 - **Maven** para gestión de dependencias.
 - **MockMvc** para pruebas de integración.
+- **Swagger** para la documentación (http://localhost:8090/swagger-ui/index.html)
 
 ---
 
